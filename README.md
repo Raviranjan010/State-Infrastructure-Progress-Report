@@ -1,74 +1,57 @@
-# State-Infrastructure-Progress-Report
-# 🛣️ Road Construction Analysis - PMGSY Projects
+🛣️ Project Overview: Road Construction Analysis under PMGSY
+This project provides an in-depth analysis of road construction initiatives under the Pradhan Mantri Gram Sadak Yojana (PMGSY). The aim is to explore patterns in project distribution, assess completion rates, and evaluate the length of roadwork sanctioned and completed across different Indian states.
 
-This project presents a comprehensive analysis of road construction projects under the **Pradhan Mantri Gram Sadak Yojana (PMGSY)**. The objective is to examine the **distribution**, **completion**, and **length** of road work sanctioned and completed across various Indian states.
+🎯 Objectives
+✅ Analyze the average road length sanctioned per project and per state
+✅ Identify states with the highest number of sanctioned projects
+✅ Visualize insights using Pivot Tables and Charts
+✅ Provide actionable insights to monitor the progress of PMGSY implementation
 
----
+📂 Dataset Overview
+File: roadconstruction.csv
 
-## 📌 Objectives
+Key Columns:
 
-- ✅ Analyze **average road length sanctioned per project and per state**
-- ✅ Calculate **road completion rate (%) per state**
-- ✅ Identify **states with the highest number of sanctioned projects**
-- ✅ Visualize data using **Pivot Tables** and **Charts**
-- ✅ Provide **insights** to track PMGSY implementation progress
+STATE_NAME: Name of the state
 
----
+LENGTH_OF_ROAD_WORK_SANCTIONED_KM: Sanctioned road length (in km)
 
-## 📂 Dataset Overview
+LENGTH_OF_ROAD_WORK_COMPLETED_KM: Completed road length (in km)
 
-File: `roadconstruction.csv`
+PROJECT_ID or UNIQUE_ID: Unique identifier for each project
 
-**Key Columns:**
-- `STATE_NAME`: Name of the state
-- `LENGTH_OF_ROAD_WORK_SANCTIONED_KM`: Sanctioned length of road (km)
-- `LENGTH_OF_ROAD_WORK_COMPLETED_KM`: Completed length of road (km)
-- `PROJECT_ID` or `UNIQUE_ID`: Each road project’s identifier (if available)
-- `road_completion_`: Flag (1 = completed, 0 = not completed)
+road_completion_: Completion status (1 = completed, 0 = not completed)
 
----
+📈 Pivot Table Analysis
+1️⃣ Average Road Length per Project
+Setup:
 
-## 📈 Pivot Table Logic
+Rows: STATE_NAME
 
-### 1️⃣ **Average Road Length per Project**
-**Formula:**
-**Pivot Setup:**
-- **Rows**: `STATE_NAME`
-- **Values**: `LENGTH_OF_ROAD_WORK_SANCTIONED_KM` → Set to **Average**
+Values: LENGTH_OF_ROAD_WORK_SANCTIONED_KM → Set to Average
 
----
+2️⃣ Road Completion Rate (%) by State
+Setup:
 
-### 2️⃣ **Road Completion Rate (%) per State**
-**Formula:**
-**Pivot Setup:**
-- **Rows**: `STATE_NAME`
-- **Values**:
-  - `LENGTH_OF_ROAD_WORK_SANCTIONED_KM` → Sum
-  - `LENGTH_OF_ROAD_WORK_COMPLETED_KM` → Sum
-- Add Calculated Field:
+Rows: STATE_NAME
 
----
+Values:
 
-## 📊 Sample Visuals
+LENGTH_OF_ROAD_WORK_SANCTIONED_KM → Sum
 
-- 🔘 **Donut Chart**: Proportion of sanctioned projects by state
-- 📏 **Bar Chart**: Completion rate across states
-- 📐 **Table View**: Average road length per project
+LENGTH_OF_ROAD_WORK_COMPLETED_KM → Sum
 
+Calculated Field:
 
+Completion Rate (%) = (Completed Length ÷ Sanctioned Length) × 100
 
----
+📊 Visualizations
+🔘 Donut Chart – Share of sanctioned projects by state
+📏 Bar Chart – Road completion rate per state
+📐 Table View – Average road length per project
 
-## 🛠️ Tools Used
+🛠️ Tools Used
+Microsoft Excel – Pivot Tables, Charts, and Calculated Fields
 
-- **Microsoft Excel** – Pivot Tables, Charts, and Calculated Fields
+GitHub – Version control and code sharing
 
-- **GitHub** – Project versioning and sharing
-
----
-
-## 💡 How to Use
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/pmgsy-road-analysis.git
